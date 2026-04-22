@@ -1,14 +1,9 @@
-# Synthwave-Hass
+# Synthwave-Hass (personal fork)
 
-[![Version](https://img.shields.io/badge/version-0.3.7-green.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
-[![Maintained](https://img.shields.io/maintenance/no/2020.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
-[![PRs Accepted](https://img.shields.io/badge/accepting%20PR's-yes-x?style=flat-square&labelColor=2a2139&color=f92aad)](#)
+[![Version](https://img.shields.io/badge/version-0.3.8-green.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
+[![Maintained](https://img.shields.io/badge/maintained-personal%20use-f92aad.svg?style=flat-square&labelColor=2a2139)](#)
 
-## Project Status
-
-**This project is no longer supported.**
-
-Due to Home Assistant now supporting limited theme customization through Lovelace, this theme has become partially redundant. Additionally, I have lost the time and interest to maintain this project further. However, I will still review and accept pull requests for any fixes or improvements submitted by the community.
+> **Heads up:** This is my personal fork of the (unmaintained) [bbbenji/synthwave-hass](https://github.com/bbbenji/synthwave-hass) theme. I update it occasionally to fix things that break for me on newer Home Assistant releases. It is **not officially supported**, comes with no guarantees, and YMMV. If it works for you, great. If it doesn't, feel free to open an issue or a PR but don't expect a fast turnaround.
 
 ---
 
@@ -22,47 +17,38 @@ Inspired by: [Synthwave VSCode Theme](https://github.com/robb0wen/synthwave-vsco
 
 ## Installation
 
-### Step 1: Locate Your Home Assistant Directory
+### Option A: HACS (custom repository)
 
-Find the directory containing your Home Assistant configuration. This is typically located at `~/.homeassistant/`.
-
-### Step 2: Add the Theme
-
-1. Navigate to the `themes` directory:
-   ```bash
-   cd ~/.homeassistant/themes
+1. In HACS, open the three-dot menu and choose **Custom repositories**.
+2. Add `https://github.com/sammcj/synthwave-hass` with type **Theme**.
+3. Install **Synthwave** from the HACS theme list.
+4. Make sure your `configuration.yaml` includes:
+   ```yaml
+   frontend:
+     themes: !include_dir_merge_named themes
    ```
-2. If the `themes` directory does not exist, create it:
+5. Restart Home Assistant, then pick **Synthwave** under your user profile.
 
+### Option B: Manual
+
+1. Find your Home Assistant config directory (often `~/.homeassistant/` or `/config/`).
+2. Create a `themes` directory inside it if one doesn't exist.
+3. Download the theme:
    ```bash
-   mkdir themes
+   wget -P themes https://raw.githubusercontent.com/sammcj/synthwave-hass/master/themes/synthwave.yaml
    ```
-
-   After creating the directory, you may need to restart Home Assistant.
-
-3. Download the theme file directly:
-   ```bash
-   wget https://raw.githubusercontent.com/bbbenji/synthwave-hass/master/themes/synthwave.yaml
+4. Add this to `configuration.yaml`:
+   ```yaml
+   frontend:
+     themes: !include_dir_merge_named themes
    ```
-
-### Step 3: Update Configuration
-
-Add the following lines to your `configuration.yaml` file to ensure Home Assistant recognizes the new theme:
-
-```yaml
-frontend:
-  themes: !include_dir_merge_named themes
-```
-
-### Step 4: Enable the Theme
-
-You can enable the theme from your profile page or by configuring it directly in `configuration.yaml`.
+5. Restart Home Assistant, then pick **Synthwave** under your user profile.
 
 ---
 
 ## Extras
 
-For additional styling that is not achievable with a `.yaml` theme file, you can install [synthwave-hass-extras](https://github.com/bbbenji/synthwave-hass-extras).
+For additional styling that is not achievable with a `.yaml` theme file, you can install [synthwave-hass-extras](https://github.com/bbbenji/synthwave-hass-extras) (from the original upstream repo, not this fork).
 
 ---
 
@@ -82,4 +68,4 @@ Here are some visuals to get a feel for the theme:
 
 ## Contributions
 
-While this project is no longer actively maintained, contributions are welcome! If you find any issues or have improvements to suggest, feel free to submit a pull request. Let's keep the Synthwave spirit alive together!
+PRs welcome but unsupported. If you find a bug or want to improve the theme, open an issue or PR on this fork. No promises on response time.
