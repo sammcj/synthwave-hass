@@ -33,6 +33,16 @@ synthwave:
   # Material/dialog/Web Awesome surface fallbacks - keep dialog form controls dark
   mdc-theme-surface: 'var(--card-background-color)'
   ha-dialog-surface-background: 'var(--card-background-color)'
+  # HA "form" surfaces - new schema-driven inputs (ha-form-*, ha-combo-box-item rows)
+  # default to neutral-95 (light) which kills readability on a dark theme
+  ha-color-form-background: 'var(--card-background-color)'
+  ha-color-form-background-hover: 'var(--ha-color-neutral-20)'
+  ha-color-form-background-disabled: 'var(--primary-background-color)'
+  # Material 3 surface containers used by md-list / ha-combo-box-item rows
+  md-sys-color-surface-container: 'var(--card-background-color)'
+  md-sys-color-surface-container-low: 'var(--card-background-color)'
+  md-sys-color-surface-container-high: 'var(--card-background-color)'
+  md-sys-color-surface-container-highest: 'var(--card-background-color)'
   
   # sidebar menu
   sidebar-text-color: 'var(--secondary-text-color)'

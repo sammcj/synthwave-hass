@@ -1,6 +1,6 @@
 # Synthwave-Hass (personal fork)
 
-[![Version](https://img.shields.io/badge/version-0.3.8-green.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
+[![Version](https://img.shields.io/badge/version-0.3.9-green.svg?style=flat-square&labelColor=2a2139&color=f92aad)](#)
 [![Maintained](https://img.shields.io/badge/maintained-personal%20use-f92aad.svg?style=flat-square&labelColor=2a2139)](#)
 
 > **Heads up:** This is my personal fork of the (unmaintained) [bbbenji/synthwave-hass](https://github.com/bbbenji/synthwave-hass) theme. I update it occasionally to fix things that break for me on newer Home Assistant releases. It is **not officially supported**, comes with no guarantees, and YMMV. If it works for you, great. If it doesn't, feel free to open an issue or a PR but don't expect a fast turnaround.
